@@ -1,0 +1,27 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - microservice-a
+  - microservice-b
+  - microservice-c
+  - microservice-d
+  - microservice-e
+  - gateway.yaml
+
+patches:
+  - target:
+      kind: Gateway
+      name: .*
+    patch: |-
+      - op: replace
+        path: /metadata/name
+        value: stage-gateway
+      
+  - target:
+      kind: Deployment
+    patch: |
+      - op: replace
+        path: /spec/replicas
+        value: 0
+
