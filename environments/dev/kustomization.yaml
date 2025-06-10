@@ -17,4 +17,8 @@
         - op: replace
           path: /metadata/name
           value: dev-gateway
+        
+        - op: replace
+          path: /spec/replicas
+          value: 0
 

@@ -17,4 +17,8 @@ patches:
       - op: replace
         path: /metadata/name
         value: prod-gateway
+      
+      - op: replace
+        path: /spec/replicas
+        value: 0
 
