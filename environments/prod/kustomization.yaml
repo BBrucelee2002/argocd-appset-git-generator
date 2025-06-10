@@ -18,5 +18,3 @@ patches:
         path: /metadata/name
         value: prod-gateway
 
-generatorOptions:
-  disableNameSuffixHash: true
