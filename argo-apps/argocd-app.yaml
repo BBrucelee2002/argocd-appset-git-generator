@@ -12,7 +12,10 @@ spec:
           - path: environments/*
   template:
     metadata:
-      name: '{{path.basename}}-'
+      name: '{{path.basename}}'
+      labels:
+        app.kubernetes.io/managed-by: argocd
+        app.kubernetes.io/part-of: app-of-apps
     spec:
       project: default
       source:
