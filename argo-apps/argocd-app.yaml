@@ -6,7 +6,7 @@ metadata:
 spec:
   generators:
     - git:
-        repoURL: https://github.com/BBrucelee2002/gitops-argocd-appofapps-appset.git
+        repoURL: https://github.com/BBrucelee2002/argocd-appset-git-generator.git
         revision: HEAD
         directories:
           - path: environments/*
@@ -16,7 +16,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/BBrucelee2002/gitops-argocd-appofapps-appset.git
+        repoURL: https://github.com/BBrucelee2002/argocd-appset-git-generator.git
         targetRevision: HEAD
         path: environments/{{path.basename}}
       destination:
